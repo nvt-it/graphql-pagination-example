@@ -1,0 +1,135 @@
+# This file overrides https://github.com/bbatsov/rubocop/blob/master/config/default.yml
+AllCops:
+  Exclude:
+    - "db/schema.rb"
+    - "bin/**/*"
+    - "Gemfile"
+    - "Gemfile.lock"
+    - "config/environments/**/*"
+    - "lib/tasks/**/*"
+  DisplayCopNames: true
+  TargetRubyVersion: 2.6
+
+Rails:
+  Enabled: true
+
+Rails/Output:
+  Exclude:
+    - 'db/seeds/*'
+
+# Use UTF-8 as the source file encoding.
+Encoding:
+  Enabled: true
+
+AsciiComments:
+  Enabled: false
+
+Lambda:
+  Enabled: false
+
+ClassAndModuleChildren:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Enabled: false
+
+StringLiterals:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/EachWithObject:
+  Enabled: false
+
+Style/BracesAroundHashParameters:
+  Enabled: false
+
+Style/BlockComments:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'app/services/**/*'
+    - 'app/models/**/*'
+    - 'db/seeds/**/*'
+    - 'config/routes.rb'
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Exclude:
+    - 'app/services/**/*'
+
+Metrics/ClassLength:
+  Exclude:
+    - 'app/controllers/**/*'
+    - 'app/models/**/*'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'app/services/**/*'
+    - 'app/models/**/*'
+  Max: 20
+
+Metrics/PerceivedComplexity:
+  Exclude:
+    - 'app/services/**/*'
+    - 'app/models/**/*'
+
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - 'app/services/**/*'
+    - 'app/models/**/*'
+  Max: 10
+
+Style/CollectionMethods:
+  PreferredMethods:
+    detect: "detect"
+    find: "detect"
+    inject: "inject"
+    reduce: "inject"
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Security/MarshalLoad:
+  Enabled: false
+
+PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%':  '()'
+    '%i': '()'
+    '%q': '()'
+    '%Q': '()'
+    '%r': '{}'
+    '%s': '()'
+    '%w': '()'
+    '%W': '()'
+    '%x': '()'
+
+# hasmany dependent
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Rails/DynamicFindBy:
+  Enabled: true
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Naming/PredicateName:
+  Enabled: true
+Rails/HasAndBelongsToMany:
+  Enabled: false

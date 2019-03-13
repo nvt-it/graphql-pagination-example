@@ -1,0 +1,12 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+create_table "articles" do |t|
+  t.string :title, null: false
+  t.string :content, null: false
+
+  t.datetime :deleted_at
+
+  # Uncomment below if timestamps were not included in your original model.
+  t.timestamps null: false
+end
