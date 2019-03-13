@@ -1,4 +1,4 @@
-# graphql-ruby
+# graphql-pagination-example
 
 ## Installation
 
